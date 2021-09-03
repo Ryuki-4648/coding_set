@@ -1,0 +1,47 @@
+/* Button */
+@mixin c-btn {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 10px 0;
+  border-radius: 7px;
+  letter-spacing: 0.05em;
+  transition: all .3s;
+  cursor: pointer;
+  @include mq($mqSP01) {
+    width: 100%;
+  }
+}
+@mixin main-btn {
+  width: 340px;
+  border: 1px solid $main-color01;
+  background-color: $main-color01;
+  color: #fff;
+  &:hover {
+    border: 1px solid $main-color01;
+    background-color: #fff;
+    color: $main-color01;
+  }
+}
+@mixin sub-btn {
+  width: 180px;
+  border: 1px solid $main-color01;
+  background-color: #fff;
+  color: $main-color01;
+  &:hover {
+    border: 1px solid $main-color01;
+    background-color: $main-color01;
+    color: #fff;
+  }
+}
+
+.c-btn {
+  .btn01 {
+    @include c-btn;
+    @include main-btn;
+  }
+  .btn02 {
+    @include c-btn;
+    @include sub-btn;
+  }
+}

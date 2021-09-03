@@ -1,0 +1,89 @@
+/* ____________________ アニメーション ____________________ */
+
+/* 反転 */
+.kv_sec  {
+  .paper {
+    //transform-origin: 58% 0;
+    -webkit-animation: turn-over 3s ease-in-out 0s infinite;
+    animation: turn-over 3s ease-in-out 0s infinite;
+  }
+}
+
+@-webkit-keyframes turn-over {
+  0% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+  }
+  50% {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1)
+  }
+  100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+  }
+}
+
+@keyframes turn-over {
+  0% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+  }
+  50% {
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1)
+  }
+  100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1)
+  }
+}
+
+/* 波 */
+.relative {
+  position: relative;
+}
+.wave {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 6px;
+  top: 9px;
+  z-index: 1;
+  overflow: hidden;
+  &::after {
+    background-image: url('/assets/img/dummy/pic_02.png');
+    animation: wave-animation 1.2s linear infinite;
+    -webkit-animation: wave-animation 1.2s linear infinite;
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    width: calc(100% + 17px);
+    background-repeat: repeat-x;
+    background-position: left top;
+    background-size: auto 100%;
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translate3d(-17px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  }
+@-webkit-keyframes wave-animation {
+  0% {
+    -webkit-transform: translate3d(-17px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
