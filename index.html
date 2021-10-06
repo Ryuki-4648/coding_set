@@ -9,11 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Title -->
-  <title>Styleguide</title>
+  <title>Styleguide | トップ | Web制作でよく使うレイアウト集</title>
 
   <!-- Meta Description -->
-  <meta name="Description" content="">
-  <meta name="Keywords" content="">
+  <meta name="Description" content="Web制作でよく使うレイアウトまとめ | Flexbox、ボタン、ホバー、見出し、リスト、テーブル、フォーム、アニメーション、html、css">
 
   <!-- Fonts -->
 
@@ -52,10 +51,10 @@
       <div class="header__nav">
         <ul class="header__list">
           <li class="header__item"><a href="/index.html" class="nav-link">トップ</a></li>
-          <li class="header__item"><a href="" class="nav-link">代表挨拶</a></li>
-          <li class="header__item"><a href="/company/" class="nav-link">事業案内</a></li>
-          <li class="header__item"><a href="/news/" class="nav-link">お知らせ</a></li>
-          <li class="header__item"><a href="/contact/" class="nav-link">お問い合わせ</a></li>
+          <li class="header__item"><a href="/animation.html" class="nav-link">アニメーション</a></li>
+          <li class="header__item"><a href="/effect.html" class="nav-link">エフェクト</a></li>
+          <li class="header__item"><a href="/form.html" class="nav-link">フォーム</a></li>
+          <li class="header__item"><a href="" class="nav-link">メニュー</a></li>
           <li class="header__item"><a href="" class="nav-link"><i class="fab fa-facebook-square"></i></a></li>
           <li class="header__item"><a href="" class="nav-link"><i class="fab fa-instagram"></i></a></li>
         </ul>
@@ -129,13 +128,7 @@
             <div class="c-btn ta-Center"><a href="#page-list" class="btn01" style="width: 100%;">リスト</a></div>
           </li>
           <li class="c-block__item block-04__item mb-10">
-            <div class="c-btn ta-Center"><a href="#page-searchform" class="btn01" style="width: 100%;">検索フォーム</a></div>
-          </li>
-          <li class="c-block__item block-04__item mb-10">
-            <div class="c-btn ta-Center"><a href="#page-form" class="btn01" style="width: 100%;">フォーム</a></div>
-          </li>
-          <li class="c-block__item block-04__item">
-            <div class="c-btn ta-Center"><a href="#page-animation" class="btn01" style="width: 100%;">アニメーション</a></div>
+            <div class="c-btn ta-Center"><a href="#page-pagination" class="btn01" style="width: 100%;">ページャー</a></div>
           </li>
           <li class="c-block__item block-04__item">
             <div class="c-btn ta-Center"><a href="#page-footerlayout" class="btn01" style="width: 100%;">フッター</a></div>
@@ -185,6 +178,8 @@
       <div class="inner">
         <p class="sample-ttl01" id="column-02">ウィジウィグ</p>
         <p class="sample-ttl02"><span class="label">WYSIWYG</span></p>
+        <p class="c-txt">特定のclassで囲った中では、class名の無いタグに対してstyleが適用される。</p>
+        <br><br>
         <h1>h1タグ：見出し1</h1>
         <h2>h2タグ：見出し2</h2>
         <h3>h3タグ：見出し3</h3>
@@ -984,116 +979,23 @@
     <!-- /.list-05 -->
   </section>
 
-  <section class="c-cnt" id="page-searchform">
+  <section class="c-cnt" id="page-pagination">
     <div class="inner">
-      <h3 class="sample-ttl01">検索フォーム</h3>
-      <p class="sample-ttl02"><span class="label">SEARCH</span></p>
-      <div class="searchBox">
-        <form action="/search/" id="search_form">
-          <div class="c-search">
-            <div class="c-search__inner">
-              <input type="search" name="search" placeholder="キーワードで探す" id="">
-              <div class="c-search-submit"><div class="c-btn"><a href="hoge" class="btn01">検索する</a></div></div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+      <h3 class="sample-ttl01">ページャー</h3>
+      <p class="sample-ttl02"><span class="label">PAGER</span></p>
 
-  <section class="c-cnt" id="page-form">
-    <div class="inner">
-      <h3 class="sample-ttl01">フォーム</h3>
-      <p class="sample-ttl02"><span class="label">FORM</span></p>
-      
-      <div class="c-form">
-        <form>
-          <table class="c-form__tbl">
-            <tr class="c-form__item">
-              <th>お問い合わせ種類<span class="required">必須</span></th>
-              <td>
-                <select name="inquiryType" class="select-area c-form__area">
-                  <option value="inquiryType01">お問い合わせの項目</option>
-                  <option value="inquiryType02">お問い合わせの項目</option>
-                  <option value="inquiryType03">お問い合わせの項目</option>
-                </select>
-              </td>
-            </tr>
-            <tr class="c-form__item">
-              <th>会社名</th>
-              <td><input id="company" type="text" name="company" class="text-area c-form__area" placeholder="会社名を入力してください"></td>
-            </tr>
-            <tr class="c-form__item">
-              <th>お名前<span class="required">必須</span</th>
-              <td><input id="yourname" type="text" name="yourname" class="text-area c-form__area" placeholder="お名前を入力してください"></td>
-            </tr>
-            <tr class="c-form__item">
-              <th>お問い合わせ内容<span class="required">必須</span</th>
-              <td><textarea id="message" type="text" name="message" class="msg-area"></textarea></td>
-            </tr>
-          </table>
-          <div class="check-area">
-            <input id="agree" type="checkbox" name="agree" value="個人情報保護方針に同意する"><label for="agree">個人情報保護方針に同意する</label>
-          </div>
-        </form>
-      </div>
-      <!-- /.c-form -->
-    </div>
-  </section>
-
-  <section class="c-cnt" id="page-css">
-    <div class="inner">
-      <h3 class="sample-ttl01">CSS</h3>
-      <p class="sample-ttl02"><span class="label">CSS</span></p>
-        <ul class="picture__list">
-          <li class="picture__item picture__item--noneshadow">
-            <a href="">
-              <div class="c-blog__thumb">
-                <div class="c-blog__image" style="background-image:url(https://www.sidethree.co.jp/.assets/DSC_0378.jpg);"></div>
-                <div class="c-blog__image--bg" style="background-image:url(https://www.sidethree.co.jp/.assets/DSC_0378.jpg);"></div>
-              </div>
-            </a>
-          </li>
-          <li class="picture__item picture__item--noneshadow">
-            <a href="">
-              <div class="c-blog__thumb">
-                <div class="c-blog__image" style="background-image:url(https://www.sidethree.co.jp/.assets/DSC09315.jpg);"></div>
-                <div class="c-blog__image--bg" style="background-image:url(https://www.sidethree.co.jp/.assets/DSC09315.jpg);"></div>
-              </div>
-            </a>
-          </li>
-          <li class="picture__item picture__item--noneshadow">
-            <a href="">
-              <div class="c-blog__thumb">
-                <div class="c-blog__image" style="background-image:url(https://www.sidethree.co.jp/.assets/DSC09385.jpg);"></div>
-                <div class="c-blog__image--bg" style="background-image:url(https://www.sidethree.co.jp/.assets/DSC09385.jpg);"></div>
-              </div>
-            </a>
-          </li>
+      <ul class="pager">
+        <ul class="page-numbers">
+          <li><a class="prev page-numbers" href=""><img src="/assets/img/common/icon_prev.svg"></a></li>
+          <li><span aria-current="page" class="page-numbers current">1</span></li>
+          <li><a class="page-numbers" href="">2</a></li>
+          <li><a class="page-numbers" href="">3</a></li>
+          <li><a class="next page-numbers" href=""><img src="/assets/img/common/icon_next.svg"></a></li>
         </ul>
+      </ul>
     </div>
   </section>
-
-  <section class="c-cnt pb-50" id="page-animation">
-    <div class="inner">
-      <h3 class="sample-ttl01">アニメーション</h3>
-      <p class="sample-ttl02"><span class="label">ANIMATION</span></p>
-      <p class="ta-Center mb-50">画像が反転する</p>
-      <section class="kv_sec inview act">
-        <figure class="windchimes">
-          <img src="/assets/img/dummy/pic_01.png" alt="" class="paper">
-        </figure>
-      </section>
-
-      <p class="ta-Center mb-50">波がうねる</p>
-      <div class="relative">
-        <span class="wave"></span>
-      </div>
-      
-    </div>
-  </section>
-
-
+  
   <div class="page-top"><a href="#" class="arrow"></a></div>
 
   <!-- ▼ footer ▼ -->

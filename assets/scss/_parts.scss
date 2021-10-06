@@ -45,3 +45,72 @@
     @include sub-btn;
   }
 }
+
+
+
+/* ____________________ PAGER / ページ送り ____________________ */
+
+.pager {
+  margin: 0 auto;
+  .page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $main-color02;
+        border: 1px solid $main-color02;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all .4s;
+        &:hover {
+          color: #fff;
+          border: 1px solid $main-color02;
+          background-color: $main-color02;
+        }
+      }
+      .current {
+        background-color: $main-color02;
+        border: 1px solid $main-color02;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        transition: all .4s;
+        margin-right: 10px;
+        &:hover {
+          opacity: .8;
+        }
+      }
+      .prev {
+        margin-right: 35px;
+      }
+      .next {
+        margin-left: 25px;
+        margin-right: 0;
+        text-align: right;
+      }
+      .next, .prev {
+        border: none;
+        background-color: none;
+        color: $main-color02;
+        display: block;
+        &:hover {
+          border: none;
+          background-color: unset;
+          color: $main-color02;
+        }
+        img {
+          width: 6px;
+        }
+      }
+    }
+  }
+}
