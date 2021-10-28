@@ -3,6 +3,8 @@
 .header {
   background-color: $nav-color01;
   padding: 20px 0;
+  z-index: 100;
+  transition: .8s;
   &__wrap {
     width: 1024px;
     margin: 0 auto;
@@ -33,6 +35,14 @@
 
   @include mq($mqTAB01) {
     display: none;
+  }
+
+  &.js-fixed {
+    position: fixed;
+    width: 100%;
+    margin-top: 0px;
+    padding: 3px 0;
+    transition: .8s;
   }
 }
 

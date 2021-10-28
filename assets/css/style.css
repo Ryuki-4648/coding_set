@@ -1630,6 +1630,9 @@ p {
 .header {
   background-color: #21282b;
   padding: 20px 0;
+  z-index: 100;
+  -webkit-transition: .8s;
+  transition: .8s;
 }
 
 .header__wrap {
@@ -1680,6 +1683,15 @@ p {
   .header {
     display: none;
   }
+}
+
+.header.js-fixed {
+  position: fixed;
+  width: 100%;
+  margin-top: 0px;
+  padding: 3px 0;
+  -webkit-transition: .8s;
+  transition: .8s;
 }
 
 .nav-sp {
