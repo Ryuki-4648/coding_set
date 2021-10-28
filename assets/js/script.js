@@ -21,3 +21,28 @@ $(function(){
     return false;
   });
 });
+
+// page top button
+var winH = $(window).height();
+var topBtn = $('.page-top');
+
+topBtn.hide();
+$(window).on('load scroll', function(){
+  if ( $(this).scrollTop() > winH ) {
+    topBtn.fadeIn();
+  } else {
+    topBtn.fadeOut();
+  }
+});
+
+// header scroll
+var headerH = $('.header').height();
+//var scrollH = $(window).scrollTop();
+
+$(window).on('load scroll', function(){
+  if ( $(this).scrollTop() > headerH ) {
+    $('.header').addClass('js-fixed');
+  } else {
+    $('.header').removeClass('js-fixed');
+  }
+});
